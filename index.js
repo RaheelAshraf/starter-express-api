@@ -14,6 +14,12 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+
+
+app.get('/', (req, res) => {
+    res.send(`hello world`)
+})
+
 // Define a function to query Pinecone and get a response
 async function queryPineconeAndReturnResponse(client, indexName, question) {
     try {
